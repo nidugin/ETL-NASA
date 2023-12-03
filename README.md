@@ -1,5 +1,5 @@
 
-# ETL NASA Pipeline 🔭 ✨
+# ELT NASA Pipeline 🔭 ✨
 
 During my summer internship I have been developing a pipeline using [NASA Open API](https://api.nasa.gov/ "NASA Open API") as the source of the data. This pipeline collects at the same time data from the two sources: APOD and NeoWs. Data is sent to the Kafka topic and received at the Hadoop server. For the base layer it uses PySpark to apply for .json files schema and loads it to the Hive table. For the analytical layer it takes the data from the table to make transformations such as deleting duplicates, rows that don't suit mandatory fields and writing invalid data to the error table. The whole pipeline is automated by Airflow.
 ## Deployment
